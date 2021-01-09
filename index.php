@@ -112,7 +112,9 @@ if ($mysqli->connect_errno) { // 接続エラーの確認
   <form method="post">
     <div>
       <label for="name">表示名</label>
-      <input id="name" type="text" name="name" value="<?php if (!empty($_SESSION['name'])) {echo $_SESSION['name'];} ?>">
+      <input id="name" type="text" name="name" value="<?php if (!empty($_SESSION['name'])) {
+                                                        echo $_SESSION['name'];
+                                                      } ?>">
     </div>
     <div>
       <label for="message">本文</label>
@@ -120,6 +122,8 @@ if ($mysqli->connect_errno) { // 接続エラーの確認
     </div>
     <div>
       <input type="submit" name="btn_submit" value="投稿">
+      <input type="button" value="管理画面" onClick="location.href='admin.php'">
+
     </div>
 
     <section>
